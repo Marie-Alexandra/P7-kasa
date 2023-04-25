@@ -1,0 +1,51 @@
+.NotFoundContainer {
+	color: $primary-color;
+	@include flex-column;
+	margin: 22px 6%;
+}
+
+.NotFoundNumber {
+	@include flex-center;
+	@include font(96px, 700);
+	margin: 12rem 0 1rem 0;
+
+	@media screen and (min-width: $breakpoint-desktop) {
+		@include font(288px, 700);
+		margin: 0;
+	}
+}
+
+%flex-NotFound {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.NotFoundText {
+	@extend %flex-NotFound;
+	text-align: center;
+	@include font(18px, 500);
+	margin: 0 11%;
+
+	@media screen and (min-width: $breakpoint-desktop) {
+		@include font(36px, 500);
+		margin: 0;
+	}
+}
+
+.NotFoundLinkHome {
+	@extend %flex-NotFound;
+	text-decoration: none;
+	color: $primary-color;
+	@include font(14px, 500);
+	margin-top: 9rem;
+
+	@media screen and (min-width: $breakpoint-desktop) {
+		@include font(18px, 500);
+	}
+
+	&:hover,
+	&:focus {
+		text-decoration-line: underline;
+	}
+}
